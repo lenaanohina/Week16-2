@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/style/style.css" />
+    <title>Форма регистрации</title>
+</head>
+
+<body>
+    <section>
+        <h1>Форма регистрации</h1>
+        <form name="registration" class="registration" novalidate>
+            <div>
+                <label for="name">Имя:</label><br>
+                <input type="text" id="name" name="name" placeholder="Введите имя" required
+                    pattern="[A-Za-zА-Яа-яЁё\s]{2,20}" minlength="2" maxlength="20">
+            </div>
+            <div>
+                <label for="email">Email:</label><br>
+                <input type="email" id="email" name="email" placeholder="example@example.com" required>
+            </div>
+            <div>
+                <label for="age">Возраст:</label><br>
+                <input type="number" id="age" name="age" placeholder="Введите возраст" required>
+            </div>
+            <div>
+                <label>Пол:</label><br>
+                <input type="radio" id="male" name="gender" value="male" required>
+                <label for="male">Мужчина</label><br>
+                <input type="radio" id="female" name="gender" value="female" required>
+                <label for="female">Женщина</label>
+            </div>
+            <div>
+                <label for="profession">Профессия:</label><br>
+                <select id="profession" name="profession" required>
+                    <option value="" disabled selected>Выберите профессию</option>
+                    <option value="doctor">Врач</option>
+                    <option value="programmer">Программист</option>
+                    <option value="teacher">Учитель</option>
+                    <option value="designer">Дизайнер</option>
+                    <option value="engineer">Инженер</option>
+                    <option value="salesman">Продавец</option>
+                    <option value="other">Другое</option>
+                </select>
+            </div>
+            <div>
+                <label for="password">Пароль:</label><br>
+                <input type="password" id="password" name="password" placeholder="Введите пароль" required
+                    pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" minlength="8">
+            </div>
+            <div>
+                <label for="confirm-password">Повторите пароль:</label><br>
+                <input type="password" id="confirm-password" name="confirm-password" placeholder="Повторите пароль"
+                    required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" minlength="8">
+            </div>
+            <div>
+                <input type="checkbox" id="consent" name="consent" required>
+                <label for="consent">Я согласен с обработкой данных</label>
+            </div>
+            <input type="submit" class="form__submit" value="Отправить">
+        </form>
+    </section>
+
+</body>
+
+</html>
